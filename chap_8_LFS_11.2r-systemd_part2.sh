@@ -689,6 +689,7 @@ rm -rf $BASE_DIR
 ZZ_FILE=''
 BASE_DIR=''
 
+
 ###################################################################
 ### 8.39. Inetutils-2.3
 ZZ_FILE='inetutils-2.3.tar.xz'
@@ -1481,9 +1482,8 @@ echo '#define SYS_VIMRC_FILE "/etc/vimrc"' >> src/feature.h
 
 make
 
-chown -Rv tester .
-
-su tester -c "LANG=en_US.UTF-8 make -j1 test" &> vim-test.log
+# chown -Rv tester .
+# su tester -c "LANG=en_US.UTF-8 make -j1 test" &> vim-test.log
 
 make install
 
@@ -1496,10 +1496,8 @@ ln -sv ../vim/vim90/doc /usr/share/doc/vim-9.0.0228
 
 ####
 cat > /etc/vimrc << "EOF"
-
  source $VIMRUNTIME/defaults.vim
  let skip_defaults_vim=1
-
  set nocompatible
  set backspace=2
  set mouse=
@@ -1507,11 +1505,10 @@ cat > /etc/vimrc << "EOF"
  if (&term == "xterm") || (&term == "putty")
  # set background=dark
  endif
-
 EOF
 ####
 
-vim -c ':options'
+# vim -c ':options'
 
 # Cleanup
 cd $LFSSRCS
