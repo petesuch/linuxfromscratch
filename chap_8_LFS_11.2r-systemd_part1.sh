@@ -162,9 +162,11 @@ zic -d $ZONEINFO -p America/New_York
 unset ZONEINFO
 
 tzselect
-# Please edit the next line for your locale
-ln -sfv /usr/share/zoneinfo/Asia/Bangkok /etc/localtime
+##### PLEASE EDIT the next line for your locale  ##########
+ln -sfv /usr/share/zoneinfo/America/New_York /etc/localtime
 
+
+############################################################
 # 8.5.2.3. Configuring the Dynamic Loader
 
 #####
