@@ -1232,8 +1232,9 @@ cd $LFSSRCS
 tar -xvf $ZZ_FILE
 cd $BASE_DIR
 
-
-PAGE=<paper_size> ./configure --prefix=/usr
+### Make the PAGE SIZE COMPATIBLE WITH YOUR PRINTER... A4 should work
+### fine.
+PAGE=A4 ./configure --prefix=/usr
 
 make -j1
 
