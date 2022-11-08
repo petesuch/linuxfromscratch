@@ -117,7 +117,9 @@ localedef -i zh_CN -f GB18030 zh_CN.GB18030
 localedef -i zh_HK -f BIG5-HKSCS zh_HK.BIG5-HKSCS
 localedef -i zh_TW -f UTF-8 zh_TW.UTF-8
 
-make localedata/install-locales
+# this next command doesn't seem to work and the book indicates its optional
+# therefore I have  commented it out.
+# make localedata/install-locales
 
 localedef -i POSIX -f UTF-8 C.UTF-8 2> /dev/null || true
 localedef -i ja_JP -f SHIFT_JIS ja_JP.SJIS 2> /dev/null || true
